@@ -1,0 +1,20 @@
+plugins {
+    id 'scala'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+def scalaVersion = '2.13.1'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:$scalaVersion"
+    compile "org.tensorflow:tensorflow:1.15.0"
+    compile "org.tensorflow:proto:1.4.0"
+    compile files('/opt/opencv/share/OpenCV/java/opencv-349.jar')
+}
